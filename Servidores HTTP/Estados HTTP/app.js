@@ -16,6 +16,16 @@ app.get("/error", (req, res) => {
   res.status(500).send("Error interno del servidor");
 });
 
+// Enrutamiento para el código de respuesta 404
+app.use((req, res) => {
+  res.status(404).send('Página no encontrada');
+});
+
+// Enrutamiento para el código de respuesta 500 (Error interno del servidor)
+app.use((error, req, res) => {
+  res.status(500).send(`Error interno del servidor ${error.stack}`);
+});
+
 // Puerto en el que se ejecutará el servidor
 const port = 3000;
 
