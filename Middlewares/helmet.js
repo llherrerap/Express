@@ -8,7 +8,8 @@ const app = express();
 app.use(helmet());
 
 // Configuración de Morgan
-app.use(morgan('dev'));
+// Este modo registra información detallada sobre cada solicitud entrante, incluyendo la dirección IP del cliente, el código de estado y el tiempo de respuesta. 
+app.use(morgan('common'));
 
 // Ruta de ejemplo
 app.get('/', (req, res) => {
