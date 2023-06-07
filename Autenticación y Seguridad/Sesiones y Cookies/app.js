@@ -5,9 +5,7 @@ const cookieParser = require('cookie-parser');
 const app = express();
 app.use(cookieParser());
 app.use(session({
-  secret: 'secreto',
-  resave: false,
-  saveUninitialized: true
+  secret: 'secreto'
 }));
 app.use(express.urlencoded({ extended: true }));
 
@@ -20,7 +18,7 @@ app.post('/formulario', (req, res)=>{
     res.send('Inicio de sesión exitoso');
 })
 
-app.get('/profile', (req, res) => {
+app.get('/perfil', (req, res) => {
   if (req.session.user) {
     res.send('Perfil del usuario: ' + req.session.user);
   } else {
