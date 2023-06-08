@@ -5,13 +5,13 @@ const app = express();
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    const data = {
+    const datos = {
       titulo: '¡Hola, mundo!',
       cuerpo: 'Esta es mi primera plantilla!! :)'
     };
   
     // Renderizar la vista 'index.ejs' y pasarle los datos
-    res.render('index', { data });
+    res.render('index', { datos });
   });
 
   const port = 3000;
