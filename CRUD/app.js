@@ -61,7 +61,7 @@ app.post('/agregar', (req, res) => {
 });
 
 app.get('/buscarUsuario', (req, res) => {
-  res.sendFile(__dirname + "/public/obtenerID.html")
+  res.sendFile(__dirname + "/public/buscar.html")
 });
 
 // Ruta para buscar una tarea
