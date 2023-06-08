@@ -6,7 +6,8 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
     const data = {
-      message: '¡Hola, mundo!'
+      titulo: '¡Hola, mundo!',
+      cuerpo: 'Esta es mi primera plantilla!! :)'
     };
   
     // Renderizar la vista 'index.ejs' y pasarle los datos
