@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+</head>
+
+<body>
+    <h1>CRUD Personas</h1>
+    <h2>Usuarios registrados</h2>
+    <table>
+        <thead>
+          <tr>
+            <th>Cedula</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% filas.forEach(function(fila) { %>
+            <tr>
+              <td><%= fila.cedula %></td>
+              <td><%= fila.nombre %></td>
+              <td><%= fila.apellido %></td>
+              <td><%= fila.edad %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+    </table>
+    <button><a href="agregarUsuario">Agregar usuario</a></button>
+    <button><a href="buscarUsuario">Actualizar usuario</a></button>
+</body>
+
+</html>
