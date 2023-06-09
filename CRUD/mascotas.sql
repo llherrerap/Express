@@ -1,12 +1,10 @@
-USE usuarios;
-
 CREATE TABLE mascotas (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  nombre VARCHAR(100) NOT NULL,
-  especie VARCHAR(100) NOT NULL,
-  raza VARCHAR(100),
+  nombre VARCHAR(50),
+  especie VARCHAR(50),
+  raza VARCHAR(50),
   edad INT,
-  propietario VARCHAR(100) NOT NULL
+  propietario VARCHAR(50)
 );
 
 INSERT INTO mascotas (nombre, especie, raza, edad, propietario) VALUES
