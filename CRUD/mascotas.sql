@@ -1,3 +1,5 @@
+USE usuarios;
+
 CREATE TABLE mascotas (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(50),
